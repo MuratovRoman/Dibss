@@ -1,0 +1,123 @@
+.header
+	padding-top: 30px
+	background-color: $bgMain
+	&-body
+		+r(xs)
+			justify-content: space-between
+			align-items: center
+		display: flex
+	&-logo
+		+r(sm)
+			margin-right: 70px
+		margin-right: 140px
+		+rfs(36px)
+		font-weight: normal
+		color: $headerTitle
+
+.header-nav
+	+r(xs)
+		display: none
+	display: flex
+	align-self: flex-end
+	justify-content: space-between
+	width: 365px	
+	&__item
+		+rfs(13.5px)
+		color: $headerText
+
+
+/*Sandwich*/
+.toggle_mnu
+	+r(xs)
+		display: block
+	position: relative
+	width: 60px
+	height: 60px
+	display: none
+	z-index: 100
+	border: none
+	background-color: transparent
+
+$w: 40px
+$h: 4px
+
+.sandwich 
+	width: $w
+	height: $h
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	z-index: 200
+
+.sw-topper
+	position: relative
+	top: -($h * 2)
+	width: $w 
+	height: $h
+	background: rgb(255, 255, 255)
+	border: none 
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	transition-delay: 0.2s, 0s
+
+.sw-bottom
+	position: relative
+	width: $w
+	height: $h
+	top: -($h - ($h / 2))
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	transition-delay: 0.2s, 0s 
+
+.sw-footer
+	position: relative
+	width: $w
+	height: $h
+	top: $h
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: all 0.5s
+	transition-delay: 0.1s
+
+.sandwich.active
+	.sw-topper
+		top: 0px
+		transform: rotate(140deg)
+	.sw-bottom
+		top: -$h
+		transform: rotate(-140deg)
+	.sw-footer
+		opacity: 0
+		top: 0
+		transform: rotate(180deg)
+
+/*MENU*/
+.top_mnu
+	position: fixed
+	display: none
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0,.9)
+	z-index: 50
+	right: 0
+	top: 0
+	ul,
+	li
+		list-style-type: none
+		padding: 0
+		margin: 0
+	ul
+		margin-top: 180px
+		text-align: center
+		a
+			color: #ffffff
+			display: block
+			padding: 20px 0
+			text-transform: uppercase
+			font-size: 12px

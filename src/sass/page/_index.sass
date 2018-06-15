@@ -1,0 +1,296 @@
+.shakers
+    &-intro
+        & .container
+            +r(lg)
+                flex-direction: column
+                align-items: center
+            display: flex
+            flex-wrap: wrap
+        display: flex
+        padding: 10px 0 58px
+        background-color: $bgMain
+        &__info
+            +r(lg)
+                text-align: center
+                width: 100%
+                padding-top: 70px
+            display: flex
+            flex-direction: column
+            padding-top: 120px
+            width: 49%
+        &__image
+            +r(lg)
+                width: 100%
+            width: 49%
+            & img
+                width: 100%
+        &__clients
+
+.shakers-info
+    &__title
+        margin-bottom: 40px
+        +rfs(36xp)
+        color: $headerTitle
+        font-weight: normal
+    &__description
+        margin-bottom: 58px
+        +rfs(15px)
+        color: $headerText
+    &__links
+        display: flex
+        flex-direction: column
+
+.shakers-links
+    &__button
+        margin-bottom: 40px
+    &__video
+        +r(lg)
+            padding-left: 0
+        position: relative
+        padding-left: 45px
+        a
+            margin-right: 12px
+            +rfs(14px)
+            color: $headerLink
+            text-decoration: underline
+        &:after
+            content: '\25BA'
+            display: inline-flex
+            justify-content: center
+            align-items: center
+            width: 17px
+            height: 17px
+            border: 1px solid $headerText2
+            border-radius: 50%
+            font-size: 10px
+            color: $headerText2
+
+.shakers-clients
+    +r(lg)
+        flex-direction: column
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 50px
+    width: 100%
+    &__slogan
+        +r(lg)
+            text-align: center
+        margin-right: 35px
+        +rfs(15px)
+        color: $headerText2
+    &__logos
+        +r(lg)
+            flex-wrap: wrap
+            justify-content: center
+        display: flex
+        justify-content: space-between
+        align-items: center
+        & img
+            +r(lg)
+                margin-bottom: 20px
+                &:last-child
+                    margin-bottom: 0
+            display: inline-block
+            margin-right: 25px
+            height: auto
+            &:nth-lastChild
+                margin-right: 0
+
+.slider-wrapper
+    position: relative
+.prevArrow
+    position: absolute
+    width: 28px
+    height: 29px
+    top: 50%
+    transform: translateY(-50%)
+    background: url(../img/shakers/prevArrow.png) no-repeat
+    background-size: cover
+    z-index: 100
+.nextArrow
+    position: absolute
+    width: 28px
+    height: 29px
+    top: 50%
+    right: 0
+    transform: translateY(-50%)
+    background: url(../img/shakers/nextArrow.png) no-repeat
+    background-size: cover
+    z-index: 100
+
+.shakers-slider
+    padding: 0 30px
+    
+    &__item
+
+.slider-item
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 30px 0
+    max-height: 297px
+    text-align: center
+    border: 1px solid #1e91f7
+    &__title
+        margin-bottom: 30px
+        +rfs(20px)
+        text-transform: uppercase
+        color: $bodyTitle
+    &__img
+        display: inline-block !important
+        height: 185px
+
+
+.accessories
+    padding-top: 62px
+    &__title
+    &-body
+        &__item
+            width: 48%
+            &:nth-child(2n+1)
+                margin-right: 70px
+            +r(lg)
+                width: 100%
+                text-align: center
+                &:nth-child(2n+1)
+                    margin-right: 0
+        &__row
+
+.accessories-row
+    +r(lg)
+        flex-direction: column
+        align-items: center
+        padding: 0
+    +r(xs)
+        margin-bottom: 35px
+    display: flex
+    padding: 0 40px
+    margin-bottom: 65px
+.accessories-feature
+    display: flex
+    flex-direction: column
+
+    &__title
+        margin-bottom: 40px
+        +rfs(25px)
+        color: $bodyTitle
+        font-weight: normal
+    &__text
+        +rfs(22.5px)
+        color: $bodyText
+        margin-bottom: 45px
+
+.accessories-photo
+    +r(lg)
+        order: 1
+    img
+        width: 100%
+
+.reviews
+    +r(xs)
+        padding: 45px 0 45px
+    padding: 115px 0 95px
+    &-body
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        &__item
+
+.reviews-item
+    +r(sm)
+        margin-right: 0
+    display: flex
+    flex-direction: column
+    min-width: 300px
+    width: 30%
+    margin: 0 28px 15px 0
+    &:last-child
+        margin-right: 0
+    &__text
+        position: relative
+        margin-bottom: 24px
+        padding: 40px 45px 45px 60px
+        +rfs(17px)
+        color: $headerTitle
+        background-color: $bgReviews
+        border-radius: 8px
+        &:before
+            content: '\201C'
+            position: absolute
+            left: 24px
+            top: 20px
+            font-family: serif
+            letter-spacing: -3px
+            font-size: 75px
+            color: rgb(17,106,206)
+        &:after
+            content: ''
+            position: absolute
+            width: 78px
+            height: 45px
+            left: 24px
+            bottom: 0px
+            background-color: $bgReviews
+            transform: rotate(-30deg)
+            z-index: -1
+    &__name
+        padding-left: 8px
+        font-size: 16px
+        color: $bodyTitle
+    &__company
+        padding: 8px
+        font-size: 14px
+        color: $bodyText
+
+.about
+    padding: 65px 30px 100px
+    background-color: $bgMain
+    &__title
+        margin-bottom: 25px
+    &-body
+        text-align: center
+        &__text
+            font-size: 16px
+            color: $headerText
+            margin-bottom: 62px
+    
+.contacts
+    +r(lg)
+        padding-left: 0
+    +r(sm)
+        padding-bottom: 40px
+    padding: 75px 0 85px 50px
+    &-body
+        +r(lg)
+            justify-content: space-around
+        display: flex
+        flex-wrap: wrap
+        &__item
+
+.contacts-item
+    +r(lg)
+        text-align: center
+        margin-right: 0
+    width: 270px
+    margin: 0 60px 20px 0
+    &:last-child
+        margin-right: 0
+    &__title
+        margin-bottom: 25px
+        +rfs(12.5px)
+        color: #3974ca
+        text-transform: uppercase
+    &__text
+        +rfs(15px)
+        color: #323232
+        line-height: 1.3
+
+.contacts-social
+    +r(lg)
+        justify-content: center
+    display: flex
+    &__item
+        margin-right: 17px
+        &:last-child
+            margin-right: 0
